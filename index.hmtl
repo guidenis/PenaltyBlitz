@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penalty Blitz - Support</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255,255,255,0.22), transparent 18%),
+        linear-gradient(180deg, rgba(5, 20, 45, 0.75), rgba(0, 70, 28, 0.65)),
+        repeating-linear-gradient(
+          90deg,
+          #0f8a3a 0px,
+          #0f8a3a 90px,
+          #0b7631 90px,
+          #0b7631 180px
+        );
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(transparent 0 38%, rgba(255,255,255,0.22) 38% 38.4%, transparent 38.4%),
+        linear-gradient(90deg, transparent 0 49.8%, rgba(255,255,255,0.18) 49.8% 50.2%, transparent 50.2%),
+        radial-gradient(circle at 50% 38%, transparent 0 74px, rgba(255,255,255,0.2) 75px 77px, transparent 78px);
+      opacity: 0.85;
+    }
+
+    .page {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 42px 20px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.42);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .icon {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      font-size: 54px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #19c85a, #087332);
+      box-shadow: inset 0 3px 8px rgba(255,255,255,0.3), 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      text-shadow: 0 5px 16px rgba(0,0,0,0.35);
+    }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .goal {
+      position: relative;
+      width: min(100%, 440px);
+      height: 170px;
+      margin: 26px auto 0;
+      border: 8px solid rgba(255,255,255,0.9);
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+      background:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.18) 0 2px, transparent 2px 22px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.18) 0 2px, transparent 2px 22px);
+    }
+
+    .keeper {
+      position: absolute;
+      left: 50%;
+      bottom: -22px;
+      transform: translateX(-50%) rotate(-12deg);
+      font-size: 54px;
+    }
+
+    .ball {
+      position: absolute;
+      right: 58px;
+      top: 52px;
+      font-size: 38px;
+      filter: drop-shadow(0 8px 10px rgba(0,0,0,0.35));
+    }
+
+    section {
+      margin-top: 28px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    a.button {
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    a.button.primary {
+      background: #ffffff;
+      color: #087332;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 26px;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+      .card { padding: 24px; }
+      .goal { height: 145px; }
+      .keeper { font-size: 46px; }
+      .ball { font-size: 32px; right: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <div class="hero">
+        <div class="icon">⚽️</div>
+        <h1>Penalty Blitz</h1>
+        <p class="tagline">Swipe. Shoot. Score. A quick arcade penalty game for iPhone.</p>
+
+        <div class="goal" aria-hidden="true">
+          <div class="ball">⚽️</div>
+          <div class="keeper">🧤</div>
+        </div>
+      </div>
+
+      <section>
+        <h2>Support</h2>
+        <p>
+          Need help with Penalty Blitz? For questions, bugs, feedback, or purchase issues,
+          contact us by email.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="mailto:gd.denis@gmail.com?subject=Penalty%20Blitz%20Support">Contact Support</a>
+          <a class="button" href="privacy.html">Privacy Policy</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>About the game</h2>
+        <ul>
+          <li>Swipe the ball to shoot penalties.</li>
+          <li>Beat the goalkeeper and chase your best score.</li>
+          <li>Fast, simple, and fun arcade gameplay.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tips</h2>
+        <p>
+          Try different swipe angles, aim for the corners, and keep your timing sharp.
+          The keeper will not make it easy.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      © 2026 Penalty Blitz. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
